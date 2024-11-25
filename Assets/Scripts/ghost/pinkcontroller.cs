@@ -6,7 +6,7 @@ public class pinkcontroller : MonoBehaviour
 {
     public float moveSpeed = 2f; // 이동 속도
     public float moveRange = 5f; // 이동 범위
-    public bool startMovingRight = true; // 초기 이동 방향
+    public bool startMovingRight = false; // 초기 이동 방향
 
     private float startX; // 초기 위치 저장
     private bool movingRight; // 현재 이동 방향

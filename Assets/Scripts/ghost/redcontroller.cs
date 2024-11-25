@@ -6,7 +6,7 @@ public class redcontroller : MonoBehaviour
 {
     public float moveSpeed = 3f; // �̵� �ӵ�
     public float moveRange = 5f; // �̵� ����
-    public bool startMovingRight = true; // �ʱ� �̵� ����
+    public bool startMovingRight = false; // �ʱ� �̵� ����
 
     private float startX; // �ʱ� ��ġ ����
     private bool movingRight; // ���� �̵� ����
