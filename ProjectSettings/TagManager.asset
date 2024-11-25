@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Bullet
+  - Jewel
   layers:
   - Default
   - TransparentFX
@@ -13,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - bullet_shooting
-  - 
-  - 
+  - Enemy
+  - onDamaged
+  - Invincible
   - 
   - 
   - 

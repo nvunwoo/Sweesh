@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class CharacterState : MonoBehaviour
 {
+        public int characterHP = 6;
+        public int coin = 0;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,8 +17,6 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * 0.05f);
-
-        Destroy(gameObject, 10);
+        
     }
 }

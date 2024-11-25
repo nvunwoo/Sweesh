@@ -56,7 +56,7 @@ public class ShooterMovement : MonoBehaviour
                 playerSpriteRenderer.flipX = false;
                 if (timer > waitingTime)
                 {
-                    Instantiate(bullet, transform.position, transform.rotation);
+                    Instantiate(bullet, transform.position - new Vector3(1, 0, 0), transform.rotation);
                     timer = 0.0f;
                 }
             }
@@ -65,7 +65,7 @@ public class ShooterMovement : MonoBehaviour
                 playerSpriteRenderer.flipX = true;
                 if (timer > waitingTime)
                 {
-                    Instantiate(bullet, transform.position, Quaternion.Euler(0f, 180f, 0f));
+                    Instantiate(bullet, transform.position + new Vector3(1,0,0), Quaternion.Euler(0f, 180f, 0f));
                     timer = 0.0f;
                 }
             }
