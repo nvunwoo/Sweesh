@@ -11121,6 +11121,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1290406012}
   - component: {fileID: 1290406011}
+  - component: {fileID: 1290406013}
+  - component: {fileID: 1290406014}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -11155,6 +11157,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1290406013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290406010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5225c8d006d944a98acfac0d29e7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishPrefabs:
+  - {fileID: 4754168041618845978, guid: b79f2561b701825419267d848932239a, type: 3}
+  - {fileID: 8913729378118191774, guid: 9f98076e2e1ca574b9f8295fb167f519, type: 3}
+  - {fileID: 2010005050196183906, guid: cb18bc256f809d244b8fdd1138278e1c, type: 3}
+  - {fileID: 1929303721908188459, guid: 6dd707787810a7044be0e312637e4ad1, type: 3}
+  spawnInterval: 5
+  spawnChance: 0.5
+--- !u!114 &1290406014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290406010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9968dad1b0c0e42bdf0c11aabb1c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishPrefabs:
+  - {fileID: 5004392401869663092, guid: 449d45038801a644a8beed426f72d036, type: 3}
+  - {fileID: 1708007535682436389, guid: 0ee3e76a6b3f2984fad3e629c7ac8347, type: 3}
+  - {fileID: 5277288462112071297, guid: 2d51e6e88a9addd4989d7e1fa8e7b245, type: 3}
+  - {fileID: 2648188022713744239, guid: a4aab607db5e2c24b8b9460c4dc38519, type: 3}
+  - {fileID: 5957878525430053267, guid: edb14baf1a8d5074d85f004dfa1ed038, type: 3}
+  spawnInterval: 5
+  spawnChance: 0.5
 --- !u!1 &1298263390
 GameObject:
   m_ObjectHideFlags: 0
@@ -17463,6 +17504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 9153730349984586545, guid: 33be2650ff8135e40bb340f254624def, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1837759110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18038,6 +18083,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1290406012}
+  - {fileID: 1231064042}
   - {fileID: 828421507}
   - {fileID: 2114464050}
   - {fileID: 1666526034}
@@ -18050,4 +18096,3 @@ SceneRoots:
   - {fileID: 693348370}
   - {fileID: 2090029851}
   - {fileID: 1563522638}
-  - {fileID: 1231064042}
