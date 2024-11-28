@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 4308466195975542326}
   - component: {fileID: 5875592897508779421}
   - component: {fileID: 4795283560543960508}
-  - component: {fileID: 7211216708513554225}
   - component: {fileID: 7333198066868130320}
   - component: {fileID: 916200365080911760}
   m_Layer: 0
-  m_Name: TestCharacter
+  m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4f3bb2d338cc54594642750e38ab5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterHP: 6
+  characterHP: 3
   coin: 0
   moveSpeed: 5
   jumpForce: 8
@@ -135,19 +134,6 @@ Rigidbody:
   m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &4795283560543960508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7809031543525431559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2593e17ef57791e4b917cf98a5076c83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnHeight: -50
---- !u!114 &7211216708513554225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

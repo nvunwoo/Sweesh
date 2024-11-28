@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterMovement : CharacterState
 {
@@ -8,6 +9,10 @@ public class CharacterMovement : CharacterState
     private Rigidbody rb;
     SpriteRenderer spriteRenderer;
     float timer = 0;
+
+    public Image Heart1;
+    public Image Heart2;
+    public Image Heart3;
 
     private bool isOnInvincibleCalled = false;
 
@@ -80,6 +85,7 @@ public class CharacterMovement : CharacterState
                 OnDamaged(collision.transform);
 
                 characterHP -= 1;
+                UpdateHeartUI(); // HP 감소 후 UI 업데이트
             }
         }
  
@@ -95,8 +101,9 @@ public class CharacterMovement : CharacterState
             }
             else 
             { 
-            OnDamaged(other.transform);
-            characterHP -= 1;
+                OnDamaged(other.transform);
+                characterHP -= 1;
+                UpdateHeartUI(); // HP 감소 후 UI 업데이트
             }
         }
         if (other.gameObject.tag == "Jewel")
@@ -106,6 +113,22 @@ public class CharacterMovement : CharacterState
         }
     }
 
+    void UpdateHeartUI()
+    {
+        Heart1.color = characterHP >= 1 ? new Color(1, 1, 1, 1) : new Color(1, 1, 1, 0);
+        Heart2.color = characterHP >= 2 ? new Color(1, 1, 1, 1) : new Color(1, 1, 1, 0);
+        Heart3.color = characterHP >= 3 ? new Color(1, 1, 1, 1) : new Color(1, 1, 1, 0);
+
+        // characterHP가 0이 되면 SphereCollider 제거
+        if (characterHP <= 0)
+        {
+            SphereCollider sphereCollider = GetComponent<SphereCollider>();
+            if (sphereCollider != null)
+            {
+                Destroy(sphereCollider); // Collider 제거
+            }
+        }
+    }
 
     void OnAttack(Transform enemy)
     {

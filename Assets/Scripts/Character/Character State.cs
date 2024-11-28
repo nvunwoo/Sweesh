@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterState : MonoBehaviour
 {
-        public int characterHP = 6;
+        public int characterHP = 3;
         public int coin = 0;
 
     
