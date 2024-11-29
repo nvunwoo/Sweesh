@@ -53,7 +53,7 @@ public class puddingmove : MonoBehaviour
         target = GameObject.Find("Character").transform;
         float distance = Vector3.Distance(transform.position, target.transform.position);
 
-        if (distance <= 3)
+        if (distance <= 5)
         {
             state = State.Charge;
         }

@@ -2,56 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jellymove : MonoBehaviour
+public class puddingmoveX : MonoBehaviour
 {
-    public float detectionRange = 5f; // 플레이어 탐지 범위
-    public float jumpForce = 5f; // 점프 힘
     public float moveSpeed = 2f; // 왼쪽으로 이동 속도
     public Vector3 destructionBounds = new Vector3(-10f, -10f, -10f); // 제거 위치 (화면 왼쪽, 아래)
     public Transform groundCheck; // Ground 체크 위치
     public float groundCheckRadius = 0.3f; // Ground 체크 반경
 
-    private Transform target; // 타겟(플레이어) Transform
     private Rigidbody rb;
-    private Animator animator; // 애니메이터 컴포넌트
-    private bool isTriggered = false; // 플레이어 탐지 여부
     private bool isGrounded = false; // 바닥에 있는지 여부
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
-
-        // 타겟 설정
-        GameObject player = GameObject.Find("Character");
-        if (player != null)
-        {
-            target = player.transform;
-        }
-        else
-        {
-            Debug.LogWarning("Character 오브젝트를 찾을 수 없습니다!");
-        }
     }
 
     void Update()
     {
-        // 타겟이 없으면 실행 중지
-        if (target == null) return;
-
         // 바닥 체크
         CheckGround();
 
-        // 플레이어 탐지 및 점프
-        if (!isTriggered && PlayerInRange() && isGrounded)
+        // 바닥에 있을 경우 이동
+        if (isGrounded)
         {
-            TriggerJump();
-        }
-
-        // 왼쪽 이동
-        if (isTriggered)
-        {
-            rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
+            MoveLeft();
         }
 
         // 적 제거 조건
@@ -80,34 +54,14 @@ public class jellymove : MonoBehaviour
         }
     }
 
-    private bool PlayerInRange()
+    private void MoveLeft()
     {
-        // 타겟이 탐지 범위에 있는지 확인
-        float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
-        return distanceToTarget <= detectionRange;
-    }
-
-    private void TriggerJump()
-    {
-        isTriggered = true;
-
-
-        // 점프 시작
-        rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
-
-        // 점프 애니메이션 재생
-        if (animator != null)
-        {
-            animator.SetTrigger("jelly_jump");
-        }
+        // 왼쪽으로 이동
+        rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
     }
 
     void OnDrawGizmosSelected()
     {
-        // 탐지 범위 시각화
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
-
         // 바닥 체크 위치 시각화
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);

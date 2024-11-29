@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2909320099298277711}
   - component: {fileID: 1664394911471207232}
   - component: {fileID: 6909743600829109248}
-  - component: {fileID: 5748479450199955105}
+  - component: {fileID: 8262180115174739205}
   m_Layer: 0
   m_Name: redghost_preFab
   m_TagString: Ghost
@@ -123,15 +123,13 @@ MonoBehaviour:
   moveSpeed: 3
   moveRange: 5
   startMovingRight: 0
---- !u!58 &5748479450199955105
-CircleCollider2D:
+--- !u!135 &8262180115174739205
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3869094043697718096}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -140,21 +138,9 @@ CircleCollider2D:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.1, y: 0}
-  serializedVersion: 2
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
   m_Radius: 0.6
+  m_Center: {x: -0.1, y: 0, z: 0}
