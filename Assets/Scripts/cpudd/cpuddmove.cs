@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class puddingmoveX : MonoBehaviour
+public class cpuddmove : MonoBehaviour
 {
-    public float moveSpeed = 4f; // 왼쪽으로 이동 속도
+    public float moveSpeed = 6f; // 왼쪽으로 이동 속도
     public float detectionRange = 5f; // 플레이어 탐지 범위
 
     private Transform target; // 플레이어(타겟)
@@ -75,6 +75,6 @@ public class puddingmoveX : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
 
-        
     }
 }
+

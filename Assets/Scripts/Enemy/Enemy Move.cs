@@ -8,12 +8,22 @@ public class EnemyMove : MonoBehaviour
     SpriteRenderer spriteRenderer;
     new Collider collider;
     Component movement;
+    public float removeHeight = -50f;
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider>();
+    }
+
+    void Update()
+    {
+        // 적의 y좌표가 지정된 높이 이하로 떨어지면 제거
+        if (transform.position.y <= removeHeight)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
