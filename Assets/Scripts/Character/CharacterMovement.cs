@@ -97,21 +97,26 @@ public class CharacterMovement : CharacterState
     {
         if (other.gameObject.tag == "Bullet")
         {
-            if (this.gameObject.layer == 8)
+            if (this.gameObject.layer != 8)
             {
-
-            }
-            else 
-            { 
                 OnDamaged(other.transform);
                 characterHP -= 1;
                 UpdateHeartUI(); // HP 감소 후 UI 업데이트
             }
         }
+
         if (other.gameObject.tag == "Jewel")
         {
             OnInvincible(other.transform);
+        }
 
+        if (other.gameObject.tag == "Heart")
+        {
+            if (characterHP < 3)
+            {
+                characterHP += 1; // characterHP 증가
+                UpdateHeartUI(); // HP 증가 후 UI 업데이트
+            }
         }
     }
 
