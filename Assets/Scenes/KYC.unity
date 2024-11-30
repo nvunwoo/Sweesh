@@ -8146,6 +8146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: jelly1_jump-Sheet_0
       objectReference: {fileID: 0}
+    - target: {fileID: 6864076137231073659, guid: 7d4a43159e4d95047957fb41b481b497, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

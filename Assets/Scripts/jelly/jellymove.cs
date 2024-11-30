@@ -14,6 +14,7 @@ public class jellymove : MonoBehaviour
     private Rigidbody rb;
     private bool isGrounded = false; // 바닥에 있는지 여부
     private bool isTriggered = false; // 플레이어 탐지 여부
+    private bool isJumping = false; // 점프 중인지 여부
     private Animator animator; // 애니메이터 컴포넌트
 
     void Start()
@@ -54,7 +55,7 @@ public class jellymove : MonoBehaviour
         }
 
         // 점프 행동
-        if (isTriggered && isGrounded)
+        if (isTriggered && isGrounded && !isJumping)
         {
             Jump();
         }
@@ -80,8 +81,7 @@ public class jellymove : MonoBehaviour
         // Idle 애니메이션 중지
         if (animator != null)
         {
-            animator.SetBool("jelly_jdle", false);
-            animator.SetTrigger("jelly_jump");
+            animator.SetBool("jelly_idle", false);
         }
     }
 
@@ -91,10 +91,20 @@ public class jellymove : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
 
         // 점프 애니메이션 트리거
-        if (animator != null && isGrounded)
+        if (animator != null)
         {
             animator.SetTrigger("jelly_jump");
         }
+
+        isJumping = true; // 점프 상태 활성화
+        StartCoroutine(ResetJump());
+    }
+
+    private IEnumerator ResetJump()
+    {
+        // 점프 상태를 일정 시간 후 초기화
+        yield return new WaitForSeconds(1f);
+        isJumping = false;
     }
 
     private void CheckGround()
@@ -123,6 +133,5 @@ public class jellymove : MonoBehaviour
         // 바닥 체크 위치 시각화
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-
     }
 }
