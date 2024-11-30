@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jelly_jump
+  m_Name: jelly_idle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -22,10 +22,6 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 905765897, guid: 5fcac276f3c216f458cfec05731ac870, type: 3}
-    - time: 0.083333336
-      value: {fileID: 176635485, guid: 5fcac276f3c216f458cfec05731ac870, type: 3}
-    - time: 0.16666667
-      value: {fileID: -669326910, guid: 5fcac276f3c216f458cfec05731ac870, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -49,14 +45,12 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: 905765897, guid: 5fcac276f3c216f458cfec05731ac870, type: 3}
-    - {fileID: 176635485, guid: 5fcac276f3c216f458cfec05731ac870, type: 3}
-    - {fileID: -669326910, guid: 5fcac276f3c216f458cfec05731ac870, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.25
+    m_StopTime: 0.083333336
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

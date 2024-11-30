@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class jellymove : MonoBehaviour
 {
-    public float detectionRange = 5f; // 플레이어 탐지 범위
-    public float jumpForce = 5f; // 점프 힘
+    public float jumpForce = 6f; // 점프 힘
     public float moveSpeed = 2f; // 왼쪽으로 이동 속도
-    public Vector3 destructionBounds = new Vector3(-10f, -10f, -10f); // 제거 위치 (화면 왼쪽, 아래)
+    public float detectionRange = 5f; // 플레이어 탐지 범위
     public Transform groundCheck; // Ground 체크 위치
     public float groundCheckRadius = 0.3f; // Ground 체크 반경
 
-    private Transform target; // 타겟(플레이어) Transform
+    private Transform target; // 플레이어(타겟)
     private Rigidbody rb;
-    private Animator animator; // 애니메이터 컴포넌트
-    private bool isTriggered = false; // 플레이어 탐지 여부
     private bool isGrounded = false; // 바닥에 있는지 여부
+    private bool isTriggered = false; // 플레이어 탐지 여부
+    private Animator animator; // 애니메이터 컴포넌트
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
 
-        // 타겟 설정
+        // "Character"라는 이름의 플레이어를 찾음
         GameObject player = GameObject.Find("Character");
         if (player != null)
         {
@@ -31,6 +30,12 @@ public class jellymove : MonoBehaviour
         else
         {
             Debug.LogWarning("Character 오브젝트를 찾을 수 없습니다!");
+        }
+
+        // Idle 애니메이션 설정
+        if (animator != null)
+        {
+            animator.SetBool("jelly_idle", true);
         }
     }
 
@@ -42,10 +47,16 @@ public class jellymove : MonoBehaviour
         // 바닥 체크
         CheckGround();
 
-        // 플레이어 탐지 및 점프
-        if (!isTriggered && PlayerInRange() && isGrounded)
+        // 플레이어 탐지
+        if (!isTriggered && PlayerInRange())
         {
-            TriggerJump();
+            TriggerJumpState();
+        }
+
+        // 점프 행동
+        if (isTriggered && isGrounded)
+        {
+            Jump();
         }
 
         // 왼쪽 이동
@@ -53,13 +64,36 @@ public class jellymove : MonoBehaviour
         {
             rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
         }
+    }
 
-        // 적 제거 조건
-        if (transform.position.x < destructionBounds.x ||
-            transform.position.y < destructionBounds.y ||
-            transform.position.z < destructionBounds.z)
+    private bool PlayerInRange()
+    {
+        // 타겟이 탐지 범위에 있는지 확인
+        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+        return distanceToTarget <= detectionRange;
+    }
+
+    private void TriggerJumpState()
+    {
+        isTriggered = true;
+
+        // Idle 애니메이션 중지
+        if (animator != null)
         {
-            Destroy(gameObject);
+            animator.SetBool("jelly_jdle", false);
+            animator.SetTrigger("jelly_jump");
+        }
+    }
+
+    private void Jump()
+    {
+        // 점프
+        rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+
+        // 점프 애니메이션 트리거
+        if (animator != null && isGrounded)
+        {
+            animator.SetTrigger("jelly_jump");
         }
     }
 
@@ -80,28 +114,6 @@ public class jellymove : MonoBehaviour
         }
     }
 
-    private bool PlayerInRange()
-    {
-        // 타겟이 탐지 범위에 있는지 확인
-        float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
-        return distanceToTarget <= detectionRange;
-    }
-
-    private void TriggerJump()
-    {
-        isTriggered = true;
-
-
-        // 점프 시작
-        rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
-
-        // 점프 애니메이션 재생
-        if (animator != null)
-        {
-            animator.SetTrigger("jelly_jump");
-        }
-    }
-
     void OnDrawGizmosSelected()
     {
         // 탐지 범위 시각화
@@ -112,9 +124,5 @@ public class jellymove : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
 
-        // 제거 위치 시각화
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(new Vector3(destructionBounds.x, -100f, destructionBounds.z),
-                        new Vector3(destructionBounds.x, 100f, destructionBounds.z)); // 왼쪽 경계
     }
 }
