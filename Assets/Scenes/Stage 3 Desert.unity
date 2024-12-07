@@ -5680,7 +5680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3436368207026350944, guid: 28e950cec08ab404abf624fd8c7b6a54, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1500
+      value: 1800
       objectReference: {fileID: 0}
     - target: {fileID: 3746488472475808953, guid: 28e950cec08ab404abf624fd8c7b6a54, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5696,7 +5696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6309883498421787266, guid: 28e950cec08ab404abf624fd8c7b6a54, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1800
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 7660256428581661570, guid: 28e950cec08ab404abf624fd8c7b6a54, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag

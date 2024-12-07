@@ -16,6 +16,7 @@ public class CharacterMovement : CharacterState
     public AudioClip deathAudioClip; // 죽는 소리
     public AudioClip jumpAudioClip;   // 점프 소리
     public AudioClip damageAudioClip; // 다치는 소리
+    public AudioClip heartAudioClip;
     private AudioSource audioSource; // AudioClip 재생용 AudioSource
 
     public Image Heart1;
@@ -136,6 +137,12 @@ public class CharacterMovement : CharacterState
 
         if (other.gameObject.tag == "Heart")
         {
+            // 하트와 충돌 시 소리 재생
+            if (heartAudioClip != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(heartAudioClip); // 효과음 재생
+            }
+
             if (characterHP < 3)
             {
                 characterHP += 1; // characterHP 증가

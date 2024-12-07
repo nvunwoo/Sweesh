@@ -109,6 +109,7 @@ MonoBehaviour:
   deathAudioClip: {fileID: 8300000, guid: aa967a280457c054bb646d57611f5bd0, type: 3}
   jumpAudioClip: {fileID: 8300000, guid: 21c1518d03c68624eaeb94a5491d103f, type: 3}
   damageAudioClip: {fileID: 8300000, guid: fd25a15f9797641458336cccfb445343, type: 3}
+  heartAudioClip: {fileID: 8300000, guid: 778e2a33779af46808f9d5d5026ccb6a, type: 3}
   Heart1: {fileID: 0}
   Heart2: {fileID: 0}
   Heart3: {fileID: 0}
