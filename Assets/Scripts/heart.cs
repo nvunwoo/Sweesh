@@ -9,10 +9,14 @@ public class heart : MonoBehaviour
 
     private Vector3 startPosition;
 
+    public AudioClip heartAudioClip;
+    private AudioSource audioSource;
+
     private void Start()
     {
         // 아이템의 초기 위치 저장
         startPosition = transform.position;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -27,6 +31,11 @@ public class heart : MonoBehaviour
         // 충돌한 오브젝트의 태그가 "Player"인지 확인
         if (other.CompareTag("Player"))
         {
+            if (heartAudioClip != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(heartAudioClip);
+            }
+
             // 아이템 오브젝트를 제거
             Destroy(gameObject);
         }

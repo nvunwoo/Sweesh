@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6539109530056175124}
   - component: {fileID: 2594410766676786835}
   - component: {fileID: 1406716379848018802}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pudding
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3f4293f6fac9e4d950605bedf3959e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  removeHeight: -50
 --- !u!54 &6539109530056175124
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.07
+  m_Radius: 1.2
   m_Center: {x: 0, y: -0.17, z: 0.2}
 --- !u!114 &1406716379848018802
 MonoBehaviour:
@@ -184,4 +185,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   detectionRange: 5
-  destructionBounds: {x: -10, y: -10, z: -10}

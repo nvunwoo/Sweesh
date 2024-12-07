@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 957086167354056854}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 5966458482929103451}
   - component: {fileID: 5559151102760410492}
   - component: {fileID: 6216498671340537891}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: jelly
   m_TagString: Enemy
   m_Icon: {fileID: 0}
