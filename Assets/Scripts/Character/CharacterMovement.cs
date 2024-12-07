@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; // TextMeshPro 네임스페이스 추가 때문에
 
 public class CharacterMovement : CharacterState
 {
@@ -15,6 +16,8 @@ public class CharacterMovement : CharacterState
     public Image Heart1;
     public Image Heart2;
     public Image Heart3;
+
+    public TextMeshProUGUI CoinNumber;
 
     private bool isOnInvincibleCalled = false;
 
@@ -95,7 +98,19 @@ public class CharacterMovement : CharacterState
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("충돌한 태그: " + other.gameObject.tag); // 충돌 태그 디버깅
+
         if (other.gameObject.tag == "Bullet")
+        {
+            if (this.gameObject.layer != 8)
+            {
+                OnDamaged(other.transform);
+                characterHP -= 1;
+                UpdateHeartUI(); // HP 감소 후 UI 업데이트
+            }
+        }
+
+        if (other.gameObject.tag == "Ghost")
         {
             if (this.gameObject.layer != 8)
             {
@@ -113,6 +128,17 @@ public class CharacterMovement : CharacterState
         if (other.gameObject.tag == "Heart")
         {
             if (characterHP < 3)
+            {
+                characterHP += 1; // characterHP 증가
+                UpdateHeartUI(); // HP 증가 후 UI 업데이트
+            }
+        }
+
+        if (other.gameObject.tag == "Coin")
+        {
+            coin++; // 숫자 증가
+            CoinNumber.text = coin.ToString("D2"); // 두 자릿수 형식으로 증가
+            if(coin >= 10)
             {
                 characterHP += 1; // characterHP 증가
                 UpdateHeartUI(); // HP 증가 후 UI 업데이트
@@ -148,11 +174,12 @@ public class CharacterMovement : CharacterState
 
     void OnDamaged(Transform enemy)
     {
+        Debug.Log("OnDamaged 호출됨"); // 디버깅 로그
         gameObject.layer = 7;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
 
         int dirc = transform.position.x- enemy.position.x > 0 ? 15 : -15;
-        rb.AddForce(new Vector3(dirc, 5, 0)*7, ForceMode.Impulse);
+        rb.AddForce(new Vector3(dirc, 4, 0)*7, ForceMode.Impulse);
         anim.SetTrigger("onDamaged");
         Invoke("OffDamaged", 2);
     }
