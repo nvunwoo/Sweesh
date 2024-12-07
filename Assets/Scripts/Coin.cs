@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public AudioClip itemCoin; 
+    public AudioClip coin_2; 
     private AudioSource audioSource;
 
     void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = itemCoin;
+        audioSource.clip = coin_2;
         audioSource.playOnAwake = false; 
     }
 
@@ -18,12 +18,12 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (itemCoin != null)
+            if (coin_2 != null)
             {
                 audioSource.Play();
             }
 
-            float destroyTime = itemCoin != null ? Mathf.Max(itemCoin.length - 0.5f, 0f) : 0f;
+            float destroyTime = coin_2 != null ? Mathf.Max(coin_2.length - 0.5f, 0f) : 0f;
             Destroy(gameObject, destroyTime);
         }
     }
