@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterMovement : CharacterState
 {
@@ -15,6 +16,8 @@ public class CharacterMovement : CharacterState
     public Image Heart1;
     public Image Heart2;
     public Image Heart3;
+
+    public TextMeshProUGUI coinNumber;
 
     private bool isOnInvincibleCalled = false;
 
@@ -105,9 +108,27 @@ public class CharacterMovement : CharacterState
             }
         }
 
+        if (other.gameObject.tag == "Ghost")
+        {
+            OnDamaged(other.transform);
+            characterHP -= 1;
+            UpdateHeartUI(); // HP 감소 후 UI 업데이트
+        }
+
         if (other.gameObject.tag == "Jewel")
         {
             OnInvincible(other.transform);
+        }
+
+        if (other.gameObject.tag == "Coin")
+        {
+            coin++; // 숫자 증가
+            coinNumber.text = coin.ToString("D2"); // 두 자릿수 형식으로 업데이트
+            if(coin >= 10)
+            {
+                characterHP += 1; // characterHP 증가
+                UpdateHeartUI(); // HP 증가 후 UI 업데이트
+            }
         }
 
         if (other.gameObject.tag == "Heart")
