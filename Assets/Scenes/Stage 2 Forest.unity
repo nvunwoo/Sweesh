@@ -509,10 +509,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mashmallow Shooter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 113695820}
   m_SourcePrefab: {fileID: 100100000, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
 --- !u!1 &17139428
 GameObject:
@@ -1495,6 +1502,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3564026850829729314, guid: b51901e6748833e4695e0c1db509dcd4, type: 3}
   m_PrefabInstance: {fileID: 76891170}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &113695812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+  m_PrefabInstance: {fileID: 15781507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &113695820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113695812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3f4293f6fac9e4d950605bedf3959e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  removeHeight: -50
 --- !u!1 &122797005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,6 +2120,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &177746696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+  m_PrefabInstance: {fileID: 1217601966}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &177746704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177746696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3f4293f6fac9e4d950605bedf3959e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  removeHeight: -50
 --- !u!1 &178739702
 GameObject:
   m_ObjectHideFlags: 0
@@ -5677,11 +5720,11 @@ PrefabInstance:
       objectReference: {fileID: 7221841393150694618}
     - target: {fileID: 5461715673905210471, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 93.975784
+      value: 41.8
       objectReference: {fileID: 0}
     - target: {fileID: 5461715673905210471, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.738142
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 5461715673905210471, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5719,10 +5762,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mashmallow Shooter
       objectReference: {fileID: 0}
+    - target: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1729945678}
   m_SourcePrefab: {fileID: 100100000, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
 --- !u!4 &490389054 stripped
 Transform:
@@ -8420,6 +8470,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &693611980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+  m_PrefabInstance: {fileID: 1227917591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &693611988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693611980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3f4293f6fac9e4d950605bedf3959e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  removeHeight: -50
 --- !u!1 &698129102
 GameObject:
   m_ObjectHideFlags: 0
@@ -14912,10 +14980,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mashmallow Shooter (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 177746704}
   m_SourcePrefab: {fileID: 100100000, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
 --- !u!1 &1222421882
 GameObject:
@@ -15247,10 +15322,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mashmallow Shooter (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 693611988}
   m_SourcePrefab: {fileID: 100100000, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
 --- !u!1 &1237945554
 GameObject:
@@ -15570,67 +15652,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1249081099
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2029500519731054143, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_Name
-      value: Mashmallow Soldier
-      objectReference: {fileID: 0}
-    - target: {fileID: 8248176712736141007, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 7221841393150694618}
-    - target: {fileID: 8346418198725217858, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 41.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346418198725217858, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346418198725217858, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346418198725217858, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346418198725217858, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346418198725217858, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346418198725217858, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346418198725217858, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346418198725217858, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346418198725217858, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: eb625e73e7a6b2a4a96c124dfb45622c, type: 3}
 --- !u!1001 &1256195906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21547,6 +21568,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 859310718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1729945670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6999462202255150748, guid: 1aa569c06da6c564089e934760ec8f9a, type: 3}
+  m_PrefabInstance: {fileID: 470438515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1729945678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729945670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3f4293f6fac9e4d950605bedf3959e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  removeHeight: -50
 --- !u!1 &1752531989
 GameObject:
   m_ObjectHideFlags: 0
@@ -26231,7 +26270,6 @@ SceneRoots:
   - {fileID: 1897936691}
   - {fileID: 3238047521719479836}
   - {fileID: 3450503815368442124}
-  - {fileID: 1249081099}
   - {fileID: 2020132554}
   - {fileID: 470438515}
   - {fileID: 1371472226}
