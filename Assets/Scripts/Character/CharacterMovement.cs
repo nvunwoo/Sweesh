@@ -131,6 +131,7 @@ public class CharacterMovement : CharacterState
             coinNumber.text = coin.ToString("D2"); // 두 자릿수 형식으로 업데이트
             if (coin >= 10)
             {
+                audioSource.PlayOneShot(heartAudioClip); // 회복하는 효과음 재생
                 characterHP += 1; // characterHP 증가
                 UpdateHeartUI(); // HP 증가 후 UI 업데이트
             }

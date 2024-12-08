@@ -309,6 +309,67 @@ RectTransform:
   m_AnchoredPosition: {x: -15.058483, y: -9.791769}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &617232957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617232960}
+  - component: {fileID: 617232959}
+  - component: {fileID: 617232958}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &617232958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617232957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c0210aafa5432439a4296f0c800f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage2Button: {fileID: 1636526110}
+  stage3Button: {fileID: 1292198303}
+--- !u!114 &617232959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617232957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91feb15c5a1e6a64bba8c0c7f8d61fb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStage1Cleared: 0
+  isStage2Cleared: 0
+--- !u!4 &617232960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617232957}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.67026, y: -0.28148812, z: -0.04281812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634142244
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +602,7 @@ GameObject:
   - component: {fileID: 815811481}
   - component: {fileID: 815811484}
   m_Layer: 5
-  m_Name: Stage 1 Button
+  m_Name: S1Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1383,7 +1444,7 @@ GameObject:
   - component: {fileID: 1292198303}
   - component: {fileID: 1292198306}
   m_Layer: 5
-  m_Name: Stage 3 Button
+  m_Name: S3Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2038,7 +2099,7 @@ GameObject:
   - component: {fileID: 1636526110}
   - component: {fileID: 1636526113}
   m_Layer: 5
-  m_Name: Stage 2 Button
+  m_Name: S2Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2838,3 +2899,4 @@ SceneRoots:
   - {fileID: 1816766587}
   - {fileID: 1486026634}
   - {fileID: 1452668658}
+  - {fileID: 617232960}
