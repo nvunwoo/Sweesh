@@ -16,7 +16,8 @@ public class CharacterMovement : CharacterState
     public AudioClip deathAudioClip; // 죽는 소리
     public AudioClip jumpAudioClip;   // 점프 소리
     public AudioClip damageAudioClip; // 다치는 소리
-    public AudioClip heartAudioClip;
+    public AudioClip heartAudioClip;  // 하트 아이템
+    public AudioClip clearAudioClip; // 클리어 소리
     private AudioSource audioSource; // AudioClip 재생용 AudioSource
 
     public Image Heart1;
@@ -150,6 +151,18 @@ public class CharacterMovement : CharacterState
             }
         }
 
+        if (other.gameObject.tag == "End")
+        {
+            // 클리어 효과음 재생
+            if (clearAudioClip != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(clearAudioClip, 10f);
+            }
+
+            // 흐려지는 효과 시작
+            StartFadeOut();
+        }
+
         if (gameObject.layer == 7) // 데미지 입으면 충돌 무시
         {
             return;
@@ -257,5 +270,28 @@ public class CharacterMovement : CharacterState
         timer += Time.deltaTime;
         float alpha = (Mathf.Sin(timer*10) + 1) / 2;
         spriteRenderer.color = new Color(alpha, alpha, alpha, 1);
+    }
+
+    void StartFadeOut()
+    {
+        StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeOut()
+    {
+        float duration = 3.0f; // 흐려지는 시간
+        float elapsedTime = 0f;
+        Color originalColor = spriteRenderer.color;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / duration);
+            spriteRenderer.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
+            yield return null;
+        }
+
+        // 플레이어 오브젝트 제거
+        Destroy(gameObject);
     }
 }
