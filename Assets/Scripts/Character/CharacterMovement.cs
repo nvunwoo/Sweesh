@@ -191,6 +191,11 @@ public class CharacterMovement : CharacterState
 
     void UpdateHeartUI()
     {
+        if(characterHP > 3)
+        {
+            characterHP = 3;
+        }
+
         Debug.Log("UpdateHeartUI called. Current HP: " + characterHP);
 
         Heart1.color = characterHP >= 1 ? new Color(1, 1, 1, 1) : new Color(1, 1, 1, 0);
