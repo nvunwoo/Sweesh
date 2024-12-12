@@ -16,8 +16,10 @@ public class CharacterMovement : CharacterState
     public AudioClip deathAudioClip; // 죽는 소리
     public AudioClip jumpAudioClip;   // 점프 소리
     public AudioClip damageAudioClip; // 다치는 소리
+    public AudioClip enemyDeathAudioClip;  // 적 죽이는 소리
     public AudioClip heartAudioClip;  // 하트 아이템
     public AudioClip clearAudioClip; // 클리어 소리
+    public AudioClip jewelAudioClip; // 보석(무적 아이템) 소리
     private AudioSource audioSource; // AudioClip 재생용 AudioSource
 
     public Image Heart1;
@@ -76,11 +78,7 @@ public class CharacterMovement : CharacterState
             isGrounded = false;
             anim.SetTrigger("Jump");
 
-            // 점프 소리 재생
-            if (jumpAudioClip != null && audioSource != null)
-            {
-                audioSource.PlayOneShot(jumpAudioClip);
-            }
+            audioSource.PlayOneShot(jumpAudioClip, 0.5f);
         }
     }
 
@@ -122,6 +120,7 @@ public class CharacterMovement : CharacterState
     {
         if (other.gameObject.tag == "Jewel")
         {
+            audioSource.PlayOneShot(jewelAudioClip); // 무적 효과음 재생
             OnInvincible(other.transform);
         }
 
@@ -220,6 +219,7 @@ public class CharacterMovement : CharacterState
 
     void OnAttack(Transform enemy)
     {
+        audioSource.PlayOneShot(enemyDeathAudioClip, 5f);
         //Reaction Force  : 반발력 
         rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
         //Enemy Die
@@ -239,7 +239,7 @@ public class CharacterMovement : CharacterState
         // 다치는 소리 재생
         if (characterHP > 0 && damageAudioClip != null && audioSource != null)
         {
-            audioSource.PlayOneShot(damageAudioClip);
+            audioSource.PlayOneShot(damageAudioClip, 2f);
         }
         Invoke("OffDamaged", 2);
     }

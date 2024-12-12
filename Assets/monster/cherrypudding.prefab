@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 636739159780533377}
   - component: {fileID: 5508378487209752148}
   - component: {fileID: 1392321365154353824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cherrypudding
   m_TagString: Enemy
   m_Icon: {fileID: 0}
