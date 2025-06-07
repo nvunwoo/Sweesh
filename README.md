@@ -1,4 +1,4 @@
-# Sweesh!
+# 🍪 Sweesh!
 
 <div align="center">
 
@@ -8,11 +8,14 @@
 
 [<img src="images/cover.png" width="100%" height="auto">]()
 
-> 이미지 & 스토리 작성 예정
+> 과자와 간식들이 살아 숨쉬는 세계  
+> 마시멜로 마왕이 이상한 설탕으로 세계를 지배하려고 한다...
+> 
+> 이것을 막으러 가는 한 용사의 달콤한 이야기
 
 <br>
 
-## 📸 스크린샷 | Screenshots
+## 🎥 게임 플레이 시연 | Gameplay Demo
 
 <div align="center">
 
