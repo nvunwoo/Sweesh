@@ -59,21 +59,21 @@
 | Profile | Name | Major | Role | Development | GitHub |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
 | <img src="https://github.com/ooohyunwooo.png" width="60" height="60"> | **조현우** | 휴먼AI공학전공 | **팀장** & 발표 | 스테이지 & UI/UX | [@ooohyunwooo](https://github.com/ooohyunwooo) |
-| <img src="https://github.com/GreenXPudding.png" width="60" height="60"> | **김영찬** | 게임전공 | 기획 & 아트 디자인 | 적 캐릭터 | [@GreenXPudding](https://github.com/GreenXPudding) |
-| <img src="https://github.com/YunseoC.png" width="60" height="60"> | **최윤서** | 한일문화콘텐츠전공 | 사운드 디자인 | 스테이지 & 아이템 | [@YunseoC](https://github.com/YunseoC) |
-| <img src="https://github.com/KimJaeYeon123.png" width="60" height="60"> | **김재연** | 생명공학전공 | 스토리 & 아트 디자인 | 주인공 & 적 캐릭터 | [@KimJaeYeon123](https://github.com/KimJaeYeon123) |
+| <img src="https://github.com/YunseoC.png" width="60" height="60"> | **최윤서** | 한일문화콘텐츠전공 | 사운드 디자이너 | 스테이지 & 아이템 | [@YunseoC](https://github.com/YunseoC) |
+| <img src="https://github.com/GreenXPudding.png" width="60" height="60"> | **김영찬** | 게임전공 | 기획 & 아트 디자이너 | 적 캐릭터 | [@GreenXPudding](https://github.com/GreenXPudding) |
+| <img src="https://github.com/KimJaeYeon123.png" width="60" height="60"> | **김재연** | 생명공학전공 | 스토리 & 아트 디자이너너 | 주인공 & 적 캐릭터 | [@KimJaeYeon123](https://github.com/KimJaeYeon123) |
 
 <br>
 
 ## 🛠️ 개발 환경 | Tech Stack
 
 | 구성 요소 | 기술 |
-|-----------|------|
-| Game Engine | Unity |
-| Language | C# |
-| Version Control | Git / GitHub |
-| Documentation | Notion |
-| 협업 도구 | Discord |
+|:------:|:------:|
+| Game Engine | ![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) |
+| Language | ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) |
+| Version Control | ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) |
+| Documentation | ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) |
+| Communication | ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white) |
 
 <br>
 
