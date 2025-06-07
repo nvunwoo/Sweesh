@@ -61,7 +61,8 @@
 | <img src="https://github.com/ooohyunwooo.png" width="60" height="60"> | **조현우** | 휴먼AI공학전공 | **팀장** & 발표 | 스테이지 & UI/UX | [@ooohyunwooo](https://github.com/ooohyunwooo) |
 | <img src="https://github.com/YunseoC.png" width="60" height="60"> | **최윤서** | 한일문화콘텐츠전공 | 사운드 디자이너 | 스테이지 & 아이템 | [@YunseoC](https://github.com/YunseoC) |
 | <img src="https://github.com/GreenXPudding.png" width="60" height="60"> | **김영찬** | 게임전공 | 기획 & 아트 디자이너 | 적 캐릭터 | [@GreenXPudding](https://github.com/GreenXPudding) |
-| <img src="https://github.com/KimJaeYeon123.png" width="60" height="60"> | **김재연** | 생명공학전공 | 스토리 & 아트 디자이너너 | 주인공 & 적 캐릭터 | [@KimJaeYeon123](https://github.com/KimJaeYeon123) |
+| <img src="https://github.com/KimJaeYeon123.png" width="60" height="60"> | **김재연** | 생명공학전공 | 스토리 & 아트 디자이너 | 주인공 & 적 캐릭터 | [@KimJaeYeon123](https://github.com/KimJaeYeon123) |
+| <img width="60" height="60"> | **한구림** | 게임전공 | 사운드 디자이너 | 스테이지 | - |
 
 <br>
 
